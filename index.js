@@ -7,12 +7,12 @@ dotenv.config();
 require("./config/db");
 
 // importing the routes
-const HomeRouter = require("./routes/HomeRouter");
+const userRouter = require("./routes/userRoutes");
 
 // express intialization
 const app = express();
 app.use(express.json());
-app.use(HomeRouter);
+app.use(userRouter);
 
 // Server start
 const PORT = process.env.PORT || 3002;
